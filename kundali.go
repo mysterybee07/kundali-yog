@@ -42,12 +42,8 @@ func EvaluateAll(chart Chart, yogas []Yoga) []YogaResult {
 	return yoga.EvaluateAll(chart, yogas)
 }
 
-func DefaultYogas() []Yoga {
-	return yoga.DefaultYogas()
-}
-
 func GetYogas(chart Chart) []YogaResult {
-	return yoga.EvaluateAll(chart, yoga.DefaultYogas())
+	return yoga.EvaluateAll(chart, yoga.Yogas)
 }
 
 func NewChart(placements ...Placement) (Chart, error) {
